@@ -1,6 +1,6 @@
 # KT_exchange
 
-> A Vue.js project
+> 关于一个交易所的项目
 
 ## Build Setup
 
