@@ -1,0 +1,19 @@
+@media screen and (height: 768px){
+    #app .mint-actionsheet {
+      bottom: 34px!important;
+    }
+    body ,
+    #app .marketKcrossBox{
+      height: calc(100% - 34px)!important;
+    }
+}
+@media screen and (height: 794px){
+    #app .mint-actionsheet {
+      bottom: 34px!important;
+    }
+    body ,
+    #app .marketKcrossBox{
+      height: calc(100% - 34px)!important;
+    }
+}
+}

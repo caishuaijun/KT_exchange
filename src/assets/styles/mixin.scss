@@ -1,0 +1,109 @@
+$error:#F01400;
+$back:#161D28; //整体的背景色
+$backGroup:#060817; //各板块背景色
+$border:#1C253F; //边框下划线 hover颜色
+$depthbid:#139460; //深度买
+$depthask:#E04A3D; //深度卖
+$rmbBack:#4e5b85; //下单版人民币背景色
+$bid:#1b9680; //买 
+$ask:#ae4e54; //卖 
+$fontFFF:#FFFFFF;
+$fontNom:rgb(175, 180, 194); //常规字颜色
+$fontBlue:#6B92FF; //蓝色字
+$uprfpre:#21BB7D; //涨
+$downrfpre:#E04A3D; //跌
+$inputBorder: #4A5F99; //输入框内边框颜色
+$color3D3D3D: #3D3D3D;
+$input1e2235: #1e2235;
+$fontc7cce6: #c7cce6;
+$font61688a: #61688a;
+$font007: #007AFF;
+$font3: #333333;
+$tablebtn: #7C7F83;
+$scroll: #4B5266; //滚动条
+$d3deff: #d3deff;
+$fontdark: #808080;
+$fontD6: #D6E0FF;
+$font262D44: #262D44;
+$fontFAAD14: #FAAD14;
+$fontA2A2A2: #A2A2A2;
+$fontE70012: #E70012;
+// 背景图片地址和大小
+@mixin bis($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@mixin borderRadius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+//定位全屏
+@mixin allcover {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+//定位上下左右居中
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//定位上下居中
+@mixin ct {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+//定位左右居中
+@mixin cl {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+//flex上下左右居中
+@mixin flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//flex上下居中
+@mixin flexct {
+    display: flex;
+    align-items: center;
+}
+
+//宽高
+@mixin wh($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+//字体大小、行高、字体
+@mixin font($size, $line-height, $family: 'Microsoft YaHei') {
+    font: #{$size}/#{$line-height} $family;
+}
+
+//字体大小，颜色
+@mixin sc($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+
+//flex 布局和 子元素 对其方式
+@mixin fj($type: space-between) {
+    display: flex;
+    justify-content: $type;
+}

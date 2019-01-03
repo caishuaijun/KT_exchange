@@ -1,0 +1,1023 @@
+@import 'mixin';
+
+/*浮动*/
+
+.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clear {
+    zoom: 1;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+/*color*/
+
+.error {
+    color: $error;
+}
+
+
+/*margin&padding*/
+
+.margin {
+    margin: 0 auto;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/*提示弹窗*/
+
+.el-message {
+    max-width: 600px;
+    justify-content: flex-start;
+    border-radius: 5px;
+    border: none;
+    &>i {
+        margin-right: 12px;
+        display: flex;
+        flex-shrink: 0;
+    }
+}
+
+.el-message.modal_success {
+    background: #50D59D;
+    color: $fontFFF;
+}
+
+.el-message.modal_fail {
+    background: #F72B44;
+    color: $fontFFF;
+}
+
+.el-message.modal_info {
+    background: #F5A623;
+    color: $fontFFF;
+}
+
+.el-message {
+    min-width: 260px;
+    height: 50px;
+    border-radius: 26px;
+    .el-icon-success,
+    .el-icon-error,
+    .el-icon-warning {
+        color: $fontFFF;
+    }
+}
+
+.el-message--success {
+    background: rgba(80, 213, 157, 1);
+    .el-message__content {
+        color: $fontFFF;
+    }
+}
+
+.el-message--error {
+    background: rgba(247, 43, 68, 1);
+    .el-message__content {
+        color: $fontFFF;
+    }
+}
+
+.el-message--warning {
+    background: rgba(245, 166, 35, 1);
+    .el-message__content {
+        color: $fontFFF;
+    }
+}
+
+// .el-message--info {
+//     background: grey;
+//     .el-message__content {
+//         color: $fontFFF;
+//     }
+// }
+.icon_message_success {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url('~@/assets/images/icon/icon_message_success.png');
+    background-size: 24px 24px;
+}
+
+.icon_message_fail {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url('~@/assets/images/icon/icon_message_fail.png');
+    background-size: 24px 24px;
+}
+
+.icon_message_info {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url('~@/assets/images/icon/icon_message_info.png');
+    background-size: 24px 24px;
+}
+
+.el-message__content {
+    color: $fontFFF;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.el-message.is-closable .el-message__content {
+    padding-right: 40px;
+}
+
+.el-message__closeBtn {
+    color: $fontFFF;
+    &:hover {
+        color: $fontFFF;
+    }
+}
+
+
+/*elment样式重写*/
+
+.header_popover {
+    padding: 12px 0px;
+}
+
+.el-popper.deadline_popper {
+    border-radius: 10px;
+    .popper__arrow {
+        top: -7px;
+    }
+}
+
+.el-date-table td.today span {
+    color: $fontFFF;
+}
+
+
+/*下拉弹出框*/
+
+.drop_box_popover {
+    padding: 0px 0px;
+}
+
+//通用下拉框样式
+.dropdown_box {
+    .el-dropdown-link {
+        cursor: pointer;
+        color: $backGroup;
+    }
+}
+
+.dropdown_menu {
+    background: $color3D3D3D !important;
+    min-width: 124px;
+    .popper__arrow::after {
+        border-bottom-color: $color3D3D3D !important;
+        border-top-color: $color3D3D3D !important;
+    }
+    .el-dropdown-menu__item {
+        color: $fontFFF;
+    }
+    .el-dropdown-menu__item:focus,
+    .el-dropdown-menu__item:not(.is-disabled):hover {
+        background-color: $color3D3D3D;
+        color: $fontFFF;
+    }
+}
+
+.dropdown_menu_mini {
+    min-width: 130px;
+    .el-dropdown-menu__item {
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        color: $fontFFF;
+    }
+}
+
+
+/*部门radio修改样式*/
+
+// 修改element radio的样式
+.el-radio__input .el-radio__inner::after {
+    font-family: "icon-bass";
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\EA33";
+    font-size: 16px;
+    vertical-align: middle;
+    color: $fontNom;
+    left: 0;
+    top: 0;
+}
+
+.el-radio__input.is-checked .el-radio__inner {
+    background: initial;
+    border-color: $fontNom;
+}
+
+
+/*------tooltip---提示框样式------*/
+
+.el-tooltip__popper.is-dark {
+    color: $fontFFF;
+}
+
+
+/*------form---表单样式------*/
+
+.spot {
+    .el-input__inner {
+        background-color: $input1e2235;
+        border-radius: 3px;
+        border: 1px solid $rmbBack;
+        color: $fontc7cce6;
+        font-size: 16px;
+        height: 42px;
+        &:hover {
+            border: 1px solid $rmbBack;
+        }
+        &:focus {
+            border: 1px solid #7a98f7;
+        }
+    }
+}
+
+.el-form-item {
+    margin: 0;
+}
+
+.el-form--label-top .el-form-item__label {
+    padding: 0;
+    color: $font61688a;
+}
+
+// .el-input__inner {
+//     background-color: $input1e2235;
+//     border-radius: 3px;
+//     border: 1px solid $rmbBack;
+//     color: $fontc7cce6;
+//     font-size: 16px;
+//     height: 42px;
+//     &:hover {
+//         border: 1px solid $rmbBack;
+//     }
+//     &:focus {
+//         border: 1px solid #7a98f7;
+//     }
+// }
+.br .el-input__inner {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.el-input.is-disabled .el-input__inner {
+    height: 42px;
+    background-color: $input1e2235;
+    border-radius: 3px;
+    border: 1px solid $rmbBack;
+    color: $fontc7cce6;
+    cursor: default;
+}
+
+// 钱包订单详情页
+.coinsDetails {
+    .el-input.is-disabled .el-input__inner {
+        height: 32px;
+        border: 2px solid $inputBorder;
+        color: $fontFFF;
+    }
+}
+
+
+/*------slider---滑块样式------*/
+
+.el-slider__runway {
+    margin: 16px 0 8px 0;
+    height: 4px;
+    background-color: $border;
+}
+
+.el-slider__bar {
+    height: 4px;
+    background-color: $fontBlue;
+}
+
+.el-slider__button {
+    width: 12px;
+    height: 12px;
+    border: 2px solid $fontBlue;
+}
+
+.spot {
+    /*------primary 按钮样式-----*/
+    .el-button--primary {
+        width: 100%;
+        font-size: 16px;
+        background: $depthbid;
+        border-color: $depthbid;
+        &:hover,
+        &:focus {
+            background: $depthbid;
+            border-color: $depthbid;
+        }
+    }
+    /*------danger 按钮样式-----*/
+    .el-button--danger {
+        width: 100%;
+        font-size: 16px;
+        background: $depthask;
+        border-color: $depthask;
+        &:hover,
+        &:focus {
+            background: $depthask;
+            border-color: $depthask;
+        }
+    }
+}
+
+.oneButtonCoin {
+    .el-button--primary {
+        width: 100%;
+        font-size: 16px;
+        background: $font007;
+        border-color: $font007;
+        span {
+            color: $fontFFF;
+        }
+        &:hover,
+        &:focus {
+            background: $font007;
+            border-color: $font007;
+        }
+    }
+    .el-form-item.is-success .el-input__inner,
+    .el-form-item.is-success .el-input__inner:focus,
+    .el-form-item.is-success .el-textarea__inner,
+    .el-form-item.is-success .el-textarea__inner:focus,
+    .el-input__inner:focus {
+        border-color: $fontBlue;
+    }
+    .el-form {
+        width: 550px;
+        margin: 0 120px;
+        .el-form-item {
+            height: 76px;
+            .el-form-item__label {
+                font-size: 16px;
+            }
+        }
+        .el-form-item__content {
+            line-height: 20px;
+            width: 400px;
+        }
+    }
+    .el-input__inner {
+        border: 1px solid #ECECEC;
+        font-size: 16px;
+        padding: 0 20px;
+        &:focus {
+            color: $font3;
+        }
+    }
+    .fees_form {
+        width: 400px;
+        margin: 0 200px;
+        .el-form-item {
+            height: 120px;
+            margin-top: 10px;
+            .el-form-item__label {
+                color: $font3;
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+        }
+        .el-input.is-disabled .el-input__inner {
+            background-color: $fontFFF;
+            border: 1px solid #ECECEC;
+            color: $font3;
+            cursor: default;
+        }
+        .fees_cancal_btn {
+            width: 100px;
+            &:hover,
+            &:focus {
+                background: $fontFFF;
+                border-color: $font007;
+            }
+            span {
+                color: $font3;
+            }
+        }
+        .fees_sure_btn {
+            width: 100px;
+            color: $fontFFF;
+            background: $font007;
+            margin-left: 30px;
+            &:hover,
+            &:focus {
+                border-color: $font007;
+            }
+            span {
+                color: $fontFFF;
+            }
+        }
+    }
+    .success_form {
+        .el-form-item {
+            height: 60px;
+        }
+        .el-input.is-disabled .el-input__inner {
+            background-color: $fontFFF;
+            border: 1px solid #ECECEC;
+            color: $font3;
+            cursor: default;
+        }
+    }
+}
+
+
+/*------menu 切换样式-----*/
+
+.el-menu {
+    background: $font262D44;
+}
+
+.el-menu--horizontal>.el-menu-item:not(.is-disabled):hover,
+.el-menu--horizontal>.el-menu-item:not(.is-disabled):focus {
+    background: $font262D44;
+    color: $fontFFF;
+}
+
+.el-menu.el-menu--horizontal {
+    border-bottom: 1px solid $back;
+}
+
+.el-menu--horizontal>.el-menu-item.is-active {
+    border-bottom: 2px solid $font007;
+    color: $fontFFF;
+}
+
+.el-menu-item {
+    padding: 0;
+}
+
+.el-menu--horizontal>.el-menu-item {
+    margin-right: 50px;
+    font-size: 16px;
+    color: $fontNom;
+}
+
+
+/*------分割线样式-----*/
+
+.under_line {
+    display: inline-block;
+    width: calc(100% - 30px);
+    height: 2px;
+    background: $border;
+    margin: 8px 15px 10px;
+}
+
+
+/*------过度条样式-----*/
+
+.gradient {
+    width: 100%;
+    height: 12px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(6, 8, 23, 0) 100%);
+}
+
+
+/*------表格样式-----*/
+
+.el-table {
+    background: $backGroup;
+    .el-button--small {
+        padding: 0;
+        span {
+            color: $fontBlue;
+        }
+    }
+    .btnColor {
+        span {
+            color: $tablebtn;
+        }
+    }
+}
+
+.el-table th,
+.el-table td,
+.el-table tr {
+    background: $backGroup;
+    padding: 8px 0;
+}
+
+.el-table .cell {
+    font-size: 12px;
+}
+
+.el-table th.is-leaf,
+.el-table td {
+    border-bottom: 1px solid $backGroup;
+}
+
+// 订单页面交易明细
+.coinsDetails {
+    .el-table td {
+        border-bottom: 1px solid $border;
+    }
+    .el-table th,
+    .el-table td,
+    .el-table tr {
+        padding: 12px 0;
+    }
+}
+
+.el-table--group::after,
+.el-table--border::after,
+.el-table::before {
+    background: $backGroup;
+}
+
+.el-table td:first-child>.cell,
+.el-table th:first-child>.cell {
+    padding-left: 22px;
+}
+
+.el-table td:last-child>.cell,
+.el-table th:last-child>.cell {
+    padding-right: 22px;
+    text-align: right;
+}
+
+.el-table__expand-column .cell .el-table__expand-icon {
+    float: right;
+    padding-right: 26px;
+}
+
+
+/* hover行 */
+
+.el-table--enable-row-hover .el-table__body tr:hover>td {
+    background: $border;
+}
+
+//现货页历史订单
+.orderHistory,
+.orderHistoryAll,
+.coinsDetails {
+    .el-table__expanded-cell[class*=cell] {
+        padding: 5px 20px;
+        .detail_son {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background: $border;
+            border: 2px solid $inputBorder;
+            border-radius: 6px;
+            padding: 10px 15px;
+        }
+        &:hover {
+            background: $border;
+        }
+    }
+}
+
+// 日期选择器
+.el-date-editor--daterange.el-input,
+.el-date-editor--daterange.el-input__inner,
+.el-date-editor--timerange.el-input,
+.el-date-editor--timerange.el-input__inner {
+    width: 220px;
+    height: 32px;
+    line-height: 32px;
+    background: $backGroup;
+    border: 2px solid $inputBorder;
+    &:focus,
+    &:hover {
+        border: 2px solid $inputBorder;
+    }
+    input {
+        display: inline-block;
+        background: $backGroup;
+        width: 90px;
+    }
+}
+
+.el-date-editor .el-range-separator {
+    color: $font3;
+    width: 10px;
+    height: 32px;
+    line-height: 32px;
+}
+
+.el-date-range-picker__header div {
+    color: $font3;
+}
+
+.el-date-editor .el-range__icon,
+.el-date-editor .el-range__close-icon {
+    display: none;
+}
+
+.el-date-range-picker table {
+    span {
+        color: $font3;
+    }
+    div {
+        color: $font3;
+    }
+}
+
+.el-date-table td.start-date span,
+.el-date-table td.end-date span {
+    background-color: $fontBlue;
+}
+
+.el-date-table td span {
+    border-radius: 2px;
+}
+
+.el-date-table td.today span {
+    color: $fontBlue;
+}
+
+// 复选框
+.el-checkbox__input.is-checked .el-checkbox__inner,
+{
+    background-color: $fontBlue;
+    border-color: $fontBlue;
+}
+
+.el-checkbox__input.is-focus .el-checkbox__inner {
+    border-color: $fontBlue;
+}
+
+.el-checkbox__inner {
+    &:hover,
+    &:focus {
+        border-color: $fontBlue;
+    }
+}
+
+.el-checkbox__inner {
+    background: $backGroup;
+    border-color: $fontBlue;
+}
+
+.el-checkbox__input.is-checked+.el-checkbox__label {
+    color: $fontBlue;
+}
+
+// 合约模块的复选框
+.smartConModules {
+    .el-checkbox__input.is-checked .el-checkbox__inner,
+    {
+        background-color: $font007;
+        border-color: $font3;
+    }
+    .el-checkbox__input.is-focus .el-checkbox__inner {
+        border-color: $font3;
+    }
+    .el-checkbox__inner {
+        &:hover,
+        &:focus {
+            border-color: $font3;
+        }
+    }
+    .el-checkbox__inner {
+        background: $fontFFF;
+        border-color: $font3;
+        height: 20px;
+        width: 20px;
+        top: -3px;
+    }
+    .el-checkbox__input.is-checked+.el-checkbox__label {
+        color: $font3;
+    }
+    .el-checkbox__inner::after {
+        width: 5px;
+        height: 11px;
+        left: 6px;
+    }
+}
+
+// tooltip提示框
+.el-tooltip__popper.is-light {
+    color: $font3;
+    line-height: 20px;
+    font-size: 14px;
+    span,
+    div {
+        color: $font3;
+    }
+}
+
+// 历史委托全部订单
+.orderHistoryAll {
+    .t_head {
+        display: inline-block;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background: $backGroup;
+        font-size: 16px;
+        text-align: left;
+        padding: 0 30px;
+        .t_head_item {
+            display: inline-block;
+            margin-right: 20px;
+            height: 50px;
+            line-height: 50px;
+            .el-input {
+                width: 108px;
+                height: 32px;
+                line-height: 32px;
+                border-radius: 4px;
+                .el-input__inner {
+                    height: 32px;
+                    line-height: 32px;
+                    border-radius: 4px;
+                    background-color: $backGroup;
+                    border: 2px solid $inputBorder;
+                    &:hover,
+                    &:focus {
+                        border-color: $inputBorder;
+                    }
+                }
+            }
+            input::input-placeholder {
+                color: $scroll;
+            }
+            input::-webkit-input-placeholder,
+            textarea::-webkit-input-placeholder {
+                color: $scroll;
+            }
+            input:-moz-placeholder,
+            textarea:-moz-placeholder {
+                color: $scroll;
+            }
+            input::-moz-placeholder,
+            textarea::-moz-placeholder {
+                color: $scroll;
+            }
+            input:-ms-input-placeholder,
+            textarea:-ms-input-placeholder {
+                color: $scroll;
+            }
+        }
+    }
+}
+
+// 全局提示框样式
+.el-message-box__wrapper {
+    .el-message-box {
+        background-color: $fontFFF;
+        border: none;
+        .el-message-box__title,
+        .el-message-box__message,
+        .el-button--default {
+            span,
+            p {
+                color: $font3;
+            }
+        }
+        .el-button--primary {
+            background-color: $font007;
+            span {
+                color: $fontFFF;
+            }
+        }
+    }
+    .el-button:hover,
+    .el-button:focus {
+        border-color: $d3deff;
+    }
+}
+
+// 智能合约
+.smartContracts,
+.smartConModules,
+.behavior,
+.dividends,
+.financing,
+.stockExchange,
+.welfare {
+    .el-table .cell {
+        font-size: 16px;
+    }
+    .el-table th.is-leaf,
+    .el-table td {
+        border: 1px solid $border;
+    }
+    .el-table--group::after,
+    .el-table--border::after,
+    .el-table::before {
+        background: $border;
+    }
+    .el-table--group,
+    .el-table--border {
+        border-left: 1px solid $border;
+        border-top: none;
+    }
+    // 智能合约按钮
+    .el-button {
+        background: #161D28;
+        border: 2px solid $fontdark;
+        width: 140px;
+        height: 40px;
+        padding: 0;
+        span {
+            font-size: 16px;
+            color: $fontdark;
+        }
+    }
+    .el-button--primary {
+        background-color: $font007;
+        border-color: $font007;
+        width: 140px;
+        span {
+            font-size: 16px;
+            color: $fontFFF;
+        }
+    }
+    .el-button--info.is-disabled,
+    .el-button--info.is-disabled:hover,
+    .el-button--info.is-disabled:focus,
+    .el-button--info.is-disabled:active {
+        width: 140px;
+        background: $fontdark;
+        cursor: default;
+        border: none;
+        span {
+            font-size: 16px;
+            color: $font3;
+        }
+    }
+    .el-button--text {
+        border-color: transparent;
+        color: $fontBlue;
+        background: transparent;
+        width: auto;
+        height: auto;
+        span {
+            color: $fontBlue;
+        }
+    }
+    .el-checkbox__input.is-disabled .el-checkbox__inner {
+        border-color: $font3;
+        // background-color: $fontFFF;
+    }
+    .el-checkbox__input.is-disabled.is-checked .el-checkbox__inner::after {
+        border-color: $fontFFF;
+    }
+    // 智能合约表单
+    .el-form-item {
+        margin-top: 5px;
+        .el-form-item__label {
+            font-size: 16px;
+            font-weight: 500;
+            color: $fontFFF;
+        }
+        .el-input__inner {
+            background-color: $backGroup;
+            border-color: $inputBorder;
+            color: $fontFFF;
+        }
+        .el-textarea__inner {
+            background: $backGroup;
+            border-color: $inputBorder;
+            color: $fontFFF;
+            min-height: 80px!important;
+        }
+        .el-input-group__append {
+            border-color: $inputBorder;
+            border-left: 0;
+            background: $backGroup;
+        }
+        .right_append_input {
+            border-right: 0!important;
+        }
+    }
+    // dialog弹框
+    .el-dialog__wrapper {
+        background: rgba(255, 255, 255, 0.3);
+    }
+    .el-dialog {
+        background: $backGroup;
+        .el-dialog__header {
+            text-align: left;
+            padding-left: 54px;
+            border-bottom: 12px solid #161D28;
+            padding-bottom: 20px;
+        }
+        .el-dialog__title {
+            color: $fontFFF;
+        }
+        .el-dialog__body {
+            padding: 15px 25px 30px;
+        }
+        .el-dialog__headerbtn {
+            right: 40px;
+        }
+    }
+    // 分页
+    .el-pagination.is-background.el-pagination--small .btn-prev,
+    .el-pagination.is-background.el-pagination--small .btn-next,
+    .el-pagination.is-background.el-pagination--small .el-pager li {
+        &:hover {
+            background: $fontBlue;
+            color: $fontFFF;
+        }
+        background: $border;
+        color:$fontD6;
+    }
+    .el-pagination.is-background .el-pager li:not(.disabled).active {
+        background: $fontBlue;
+        color: $fontFFF;
+    }
+    // 文件上传
+    .upload-demo {
+        display: inline-block;
+        height: 40px;
+        margin: 0 15px;
+    }
+    .el-input--suffix .el-input__inner {
+        background: $backGroup;
+        border: 2px solid $border;
+    }
+}
+
+.coinsDetails {
+    .el-table__body tr.current-row>td {
+        background-color: $font262D44;
+    }
+    .review_last {
+        .el-table th.is-leaf,
+        .el-table td {
+            border: 1px solid $border;
+        }
+        .el-table--group::after,
+        .el-table--border::after,
+        .el-table::before {
+            background: $border;
+        }
+        .el-table--group,
+        .el-table--border {
+            border-left: 1px solid $border;
+            border-top: none;
+        }
+        .el-table th,
+        .el-table td,
+        .el-table tr {
+            padding: 8px 0;
+        }
+    }
+    .el-table .cell,
+    .el-button--small {
+        font-size: 14px;
+    }
+    // 导航页
+    .el-menu {
+        height: 100%;
+        background: $backGroup;
+        border-right: none;
+        .is-active {
+            background: $font262D44;
+        }
+        .el-menu-item {
+            padding: 0 20px;
+            &:hover {
+                background: $font262D44;
+            }
+        }
+        .el-submenu__title:hover {
+            background: $font262D44;
+        }
+    }
+}
